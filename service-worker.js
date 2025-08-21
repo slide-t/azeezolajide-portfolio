@@ -3,7 +3,8 @@ const urlsToCache = [
   "/",
   "/index.html",
   "/style.css",
-  "/script.js"
+  "/script.js",
+  "/manifest.json"
 ];
 
 // Install & cache
