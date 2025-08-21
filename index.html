@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d6efd">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Olajide Azeez - Portfolio</title>
-  <meta name="description" content="Olajide Qzeez | Web Developer Portfolio showcasing JobTrust Connect, EduKids Africa, and PWA projects. Available for remote freelance and contract work.">
+  <meta name="description" content="Olajide Azeez | Web Developer Portfolio showcasing JobTrust Connect, EduKids Africa, and PWA projects. Available for remote freelance and contract work.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -88,6 +90,15 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/service-worker.js")
+        .then(reg => console.log("Service Worker registered:", reg.scope))
+        .catch(err => console.log("Service Worker error:", err));
+    });
+  }
   </script>
 </body>
 </html>
